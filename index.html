@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>HERMES 2022 Foundation – Lern‑Quiz</title>
+    <title>HERMES 2022 Foundation – Lern‑Quiz</title>
     <!-- TailwindCSS via CDN -->
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
@@ -11,7 +11,8 @@
     <h1 class="text-3xl font-bold mb-6 mt-2 text-center">HERMES 2022 Foundation – Lern‑Quiz</h1>
 
     <div id="quizCard" class="w-full max-w-3xl bg-white rounded-2xl shadow p-6 hidden">
-      <div id="questionText" class="text-xl font-semibold mb-4"></div>
+      <!-- whitespace-pre-line bewahrt Zeilenumbrüche in Template‑Literals -->
+      <div id="questionText" class="text-xl font-semibold mb-4 whitespace-pre-line"></div>
       <div id="options" class="space-y-3"></div>
       <div id="feedback" class="mt-4 text-lg font-medium"></div>
       <div class="mt-6 flex gap-3 justify-between">
@@ -62,7 +63,7 @@
             c: 'Im Modul "Organisation" wird die Projektorganisation festgelegt.',
             d: 'Im Modul "Organisation" wird die Betriebsorganisation festgelegt.'
           },
-          correct: 'b'
+          correct: 'c'
         },
         {
           id: 4,
@@ -84,7 +85,7 @@
             c: 'Kompetenzzentrum Projektmanagement',
             d: 'Projektausschuss'
           },
-          correct: 'a'
+          correct: 'b'
         },
         {
           id: 6,
@@ -161,7 +162,7 @@
             c: 'Einführung und Bereitstellung von HERMES in der Organisation.',
             d: 'Beschaffung und Integration einer IT-Individualanwendung zur Lagerverwaltung.'
           },
-          correct: 'c'
+          correct: 'd'
         },
         {
           id: 13,
@@ -172,7 +173,7 @@
             c: 'Sie haben die Aufgabe, die Lösungsanforderungen zu erarbeiten.',
             d: 'Sie treffen den Entscheid zur Abnahme.'
           },
-          correct: 'd'
+          correct: 'c'
         },
         {
           id: 14,
@@ -260,7 +261,7 @@
             c: 'Entscheid Zuschlag treffen',
             d: 'Entscheid Abnahme treffen'
           },
-          correct: 'd'
+          correct: 'b'
         },
         {
           id: 22,
@@ -271,7 +272,7 @@
             c: 'Phasenfreigabe vorbereiten',
             d: 'Projekt steuern'
           },
-          correct: 'c'
+          correct: 'd'
         },
         {
           id: 23,
@@ -304,11 +305,15 @@
             c: 'Der Projektleiter',
             d: 'Der Anwendervertreter'
           },
-          correct: 'd'
+          correct: 'b'
         },
         {
           id: 26,
-          text: ' Das Projekt "PM2025" befindet sich in der Phase Initialisierung. Ziel des Projektes ist es die Dokumentenarchivierung in ihrer Abteilung zu digitalisieren. Als Auftraggeber agiert ihr Abteilungsleiter, Herr Deville. Sie haben die Rolle Projektleiter inne. Die Projektorganisation für die erste Phase umfasst die Rollen Anwendervertreter (Mohamed Sisi), Qualitäts- und Risikomanager (David Levin) sowie einen Projektausschuss. Der Entscheid "Weiteres Vorgehen" hat als Ergebnis das Szenario "Dienstleistung/Produkt Entwicklung" sowie eine agile Vorgehensweise ergeben.  Welche Aussage ist - auf der Basis dieser Ausgangslage - korrekt gemäss HERMES?',
+          text: `Das Projekt "PM2025" befindet sich in der Phase Initialisierung. Ziel ist es, die Dokumentenarchivierung Ihrer Abteilung zu digitalisieren. Auftraggeber ist Herr Deville (Abteilungsleiter), Sie übernehmen die Rolle des Projektleiters. Weitere Rollen: Anwendervertreter Mohamed Sisi, Qualitäts- und Risikomanager David Levin, sowie ein Projektausschuss.
+
+Der Entscheid "Weiteres Vorgehen" ergab das Szenario "Dienstleistung/Produkt Entwicklung" mit **agiler** Vorgehensweise.
+
+Welche Aussage ist – basierend auf dieser Ausgangslage – **korrekt** gemäss HERMES?`,
           options: {
             a: 'Für die nächste Phase muss in der Projektorganisation – zusätzlich zu den minimalen Rollen – mindestens eine Rolle ergänzt werden.',
             b: 'Für die nächste Phase muss in der Projektorganisation nur eine weitere, zwingende Rolle ergänzt werden.',
@@ -319,7 +324,18 @@
         },
         {
           id: 27,
-          text: ' Das Projekt "Portfolio2Map" steht am Ende der Phase Initialisierung. Das Projekt verfolgt das Ziel die Projektlandschaft der gesamten Unternehmung zu erfassen, entsprechende Auswertungen vorzunehmen und mit der Strategie zu verbinden. Die Projektorganisation präsentierte sich für die Phase Initialisierung wie folgt: Auftraggeber: Frau Powers, Leiterin der Stabsdienste (Unterstützung der Geschäftsleitung). Projektleiter: Sie (Projektleiter-Pool) Anwendervertreter: Mohamed Sisi (Stabsdienste) Qualitäts- und Risikomanager: David Levin (Stabsdienste) Projektausschuss: Rémy Monay (Leiter Finanzen), David Levin (Stabsdienste), Pascale Houmard (Leiterin Human Resource) und Luca Pizarro (Leiter Produktentwicklung) Der Entscheid "Weiteres Vorgehen" hat als Ergebnis eine sinnvolle Lösungsvariante, das Szenario "Dienstleistung/Produkt Adaption" sowie eine agile Vorgehensweise ergeben. Welche Aussage ist - auf der Basis dieser Ausgangslage - gemäss HERMES nicht korrekt?',
+          text: `Das Projekt "Portfolio2Map" ist am Ende der Phase Initialisierung. Ziel: Projektlandschaft der Unternehmung erfassen, auswerten, strategisch verknüpfen.
+
+Organisation (Initialisierung):
+• Auftraggeber: Frau Powers (Leiterin Stabsdienste)
+• Projektleiter: Sie
+• Anwendervertreter: Mohamed Sisi
+• Qualitäts- und Risikomanager: David Levin
+• Projektausschuss: Rémy Monay, David Levin, Pascale Houmard, Luca Pizarro
+
+Der Entscheid "Weiteres Vorgehen" lieferte eine Lösungsvariante, Szenario "Dienstleistung/Produkt Adaption" und **agile** Vorgehensweise.
+
+Welche Aussage ist – auf dieser Basis – gemäss HERMES **nicht korrekt**?`,
           options: {
             a: 'Die Rollen Auftraggeber und Projektleiter sind gemäss den Grundsätzen von HERMES zugeteilt worden.',
             b: 'Aus den Rollenbesetzungen ergibt sich kein Rollenkonflikt.',
@@ -330,7 +346,11 @@
         },
         {
           id: 28,
-          text: ' Demnächst soll das Projekt "PM2025" initialisiert werden. Das Projekt soll in ihrer Abteilung die Dokumentenarchivierung digitalisieren. Als HERMES-Experte diskutieren Sie mit ihrem Abteilungsleiter, Herrn Deville, die Rollenbesetzungen. Da Herr Deville unbedingt erste Erfahrungen mit HERMES sammeln will, schlägt er Sie für die Rolle des Auftraggebers vor. Er sieht sich selber in der Rolle des Projektleiters.  Welche Aussage ist mit dieser Ausgangslage gemäss HERMES korrekt?',
+          text: `Vor der Initialisierung von "PM2025" schlägt Ihr Abteilungsleiter folgende Besetzung vor:
+• **Sie** als Auftraggeber (wegen HERMES‑Expertise)
+• **Herr Deville** als Projektleiter
+
+Welche Aussage ist – gemäss HERMES – **korrekt**?`,
           options: {
             a: 'Die geplante Besetzung der Rolle Auftraggeber ist korrekt, weil die Anwender so genügend vertreten sein werden.',
             b: 'Die geplante Besetzung der Rolle Projektleiter ist korrekt, weil die HERMES-Kenntnisse auf Seiten Auftraggeber vorhanden sind.',
@@ -341,8 +361,15 @@
         },
         {
           id: 29,
-          text: ' Das Projekt "2023Plus" soll mit HERMES in klassischer Form abgewickelt werden. Es hat zum Ziel das System zur Zeiterfassung zu modernisieren. Die Projektorganisation sieht vor, dass Frau Delacroix - als Leiterin der Abteilung "Personal" - die Rolle "Auftraggeber" übernimmt. Sie sind als Mitarbeiter der Personalabteilung für die Projektleitung vorgesehen. Frau Delacroix bringt viel Erfahrung im Berichtswesen mit und besetzt deshalb auch die
-Rolle "Qualitäts- und Risikomanager". Ausserdem sind Sie - qualifiziert durch langjährige Team-Verantwortung und Scrum-Erfahrung - für die Rolle Anwendervertreter vorgesehen. Wurden die Rollenbesetzungen korrekt vorgenommen? Wählen Sie die bestmögliche Antwort.',
+          text: `Projekt "2023Plus" (Modernisierung Zeiterfassung) – klassische Vorgehensweise.
+
+Rollenbesetzung:
+• Auftraggeber: Frau Delacroix (Leiterin Personal)
+• Projektleiter: Sie (Mitarbeiter Personal)
+• Qualitäts- und Risikomanager: Frau Delacroix
+• Anwendervertreter: Sie
+
+Bewerten Sie:`,
           options: {
             a: 'Nein, es gibt mindestens eine mit HERMES nicht vereinbare Rollenbesetzung.',
             b: 'Ja, die Rollenbesetzungen stimmen mit den Vorgaben von HERMES überein.',
@@ -382,7 +409,7 @@ Rolle "Qualitäts- und Risikomanager". Ausserdem sind Sie - qualifiziert durch l
             c: 'Ja, sofern der Projektausschuss informiert ist und daraus keine Interessenkonflikte entstehen.',
             d: 'Nein, das Risiko, dass damit zu wenig Kapazität für die Projektführung zur Verfügung steht, wäre zu hoch.'
           },
-          correct: 'a'
+          correct: 'c'
         },
         {
           id: 33,
@@ -448,7 +475,7 @@ Rolle "Qualitäts- und Risikomanager". Ausserdem sind Sie - qualifiziert durch l
             c: 'Produkt abnehmen',
             d: 'Entscheid Phasenfreigabe Abschluss treffen'
           },
-          correct: 'a'
+          correct: 'c'
         },
         {
           id: 39,
@@ -459,7 +486,7 @@ Rolle "Qualitäts- und Risikomanager". Ausserdem sind Sie - qualifiziert durch l
             c: 'Initialisierung, Konzept, Realisierung, Einführung',
             d: 'Realisierung, Einführung'
           },
-          correct: 'a'
+          correct: 'c'
         },
         {
           id: 40,
@@ -470,7 +497,7 @@ Rolle "Qualitäts- und Risikomanager". Ausserdem sind Sie - qualifiziert durch l
             c: 'Der Projektleiter ist verantwortlich für die Ergebnisse des Projekts und die Erreichung der Ziele innerhalb der gesetzten Rahmenbedingungen.',
             d: 'Der Projektleiter beurteilt das Vorgehen und die Ergebnisse des Projektmanagements, der Projektorganisation und der Zusammenarbeit im Projekt.'
           },
-          correct: 'b'
+          correct: 'c'
         }
       ];
 
@@ -496,7 +523,7 @@ Rolle "Qualitäts- und Risikomanager". Ausserdem sind Sie - qualifiziert durch l
         const q = questions[idx];
         questionText.textContent = `${q.id}) ${q.text}`;
 
-        // vorhandene Optionen leeren
+        // Optionen zurücksetzen
         optionsDiv.innerHTML = '';
         feedback.textContent = '';
         Object.entries(q.options).forEach(([key, value]) => {
